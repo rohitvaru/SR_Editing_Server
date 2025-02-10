@@ -1,3 +1,4 @@
+// forech find indexOf filter map
 const express = require('express');
 const cors = require('cors');
 
@@ -15,6 +16,6 @@ app.get('/', (req, res) => {
     res.sendFile('./public/images/');  // This will not work
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+app.listen(3001, () => {
+    console.log('Server is running on port 3001');
 });
