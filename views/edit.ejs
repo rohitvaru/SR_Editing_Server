@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Edit File</title>
+</head>
+
+<body>
+    <div class="root w-full h-full   mt-2 ">
+        <form class="m-2 bg-gray-500 rounded flex gap-3 flex-col " action="/edit/<%= fileName%>" method="post">
+            <input type="text" name="newName" class=" px-2  m-3 w-1/4 h-10 bg-gray-800 text-white rounded text-start"
+                placeholder="previous Name...." value="<%= fileName%>">
+            <Textarea name="description" class="resize-none px-2  m-3 w-3/4 h-20 bg-gray-800 text-white rounded "
+                placeholder="Enter your task description...."><%= fileData%></Textarea>
+            <button type="submit" class=" rounded-xl m-3 w-24 h-10 bg-black text-white">Edit Task</button>
+        </form>
+    </div>
+</body>
+
+</html>
