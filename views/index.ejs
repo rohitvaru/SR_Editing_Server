@@ -13,6 +13,7 @@
     <div class="root w-full h-full   mt-2 ">
         <div class="box w-cover h-20 bg-gray-800 flex justify-center items-center">
             <h1 class="text-3xl text-center text-white">Task Manager</h1>
+            
         </div>
         <form class="m-2 bg-gray-500 rounded flex gap-3 flex-col " action="/create" method="post">
             <input type="text" name="tittle" class=" px-2  m-3 w-cover h-10 bg-gray-800 text-white rounded text-start"
@@ -21,13 +22,13 @@
                 placeholder="Enter your task description...."></Textarea>
             <button type="submit" class=" rounded-xl m-3 w-24 h-10 bg-black text-white">Create Task</button>
         </form>
-        <div class="alltask w-full h-fit flex flex-row gap-3">
+        <div class=" alltask w-full h-fit flex max-sm:flex-col flex-row gap-3">
             <%if(files.length>0){%>
 
                 <% files.forEach((val)=> { %>
                     <div class="task text-gray-100 h-fit bg-gray-500 m-3  px-3 rounded">
                         <h1><%=val%></h1>
-                        <div class="w-full h-fit flex flex-row justify-between mt-3">
+                        <div class=" w-full h-fit flex sm:flex-row justify-between mt-3">
                             <a class="text-blue-900 " href="/file/<%=val%>">read more....</a>
                             <a class="text-blue-900 " href="/edit/<%= val %>">Edit</a>
                         </div>

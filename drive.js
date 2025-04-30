@@ -1,0 +1,1 @@
+const driveurl = `https://drive.usercontent.google.com/download?id=${id}`;

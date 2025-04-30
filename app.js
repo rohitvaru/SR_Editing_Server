@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 
-
+app.set('view engine', 'ejs') // set view engine to ejs
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(express.static(path.join(__dirname, 'public')))
@@ -28,7 +28,9 @@ app.get('/about', function (req, res) {
 app.get('/profile', function (req, res) {
     res.send('Hello world I am your profile Page')
 })
-
+app.get('/drive', function (req, res) {
+    res.render('drive');
+});
 // Error-handling middleware always takes four arguments.
 app.get('/work', function (req, res,next) {
     res.send('Hello world I am your work Page')

@@ -4,7 +4,7 @@
   "description": "my static server",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
